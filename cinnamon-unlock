@@ -1,0 +1,7 @@
+#!/bin/bash
+echo Unlock
+if [[ -n $SUDO_USER ]]; then
+	sudo -u $SUDO_USER cinnamon-screensaver-command -d
+else
+	cinnamon-screensaver-command -d
+fi
